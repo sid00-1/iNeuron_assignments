@@ -1,0 +1,81 @@
+Q1. How do you load a CSV file into a Pandas DataFrame?
+-> import pandas as pd
+   df = pd.read_csv("xyz.csv")
+
+Q2. How do you check the data type of a column in a Pandas DataFrame?
+-> df.dtypes
+
+Q3. How do you select rows from a Pandas DataFrame based on a condition?
+-> We use loc or iloc functions.
+
+Q4. How do you rename columns in a Pandas DataFrame?
+-> We can rename the columns in dataframe by using the "rename" function.
+   df.rename(columns = {'abc':'XYZ'}, inplace = True)
+
+Q5. How do you drop columns in a Pandas DataFrame?
+-> We can use the 'drop' function to drop the columns from the Dataframe.
+   df.drop(['abc'], axis=1)
+
+Q6. How do you find the unique values in a column of a Pandas DataFrame?
+-> We use 'unique' function to get unique values from the column.
+   df.unique()
+
+Q7. How do you find the number of missing values in each column of a Pandas DataFrame?
+-> df.isna().sum().sum()
+
+Q8. How do you fill missing values in a Pandas DataFrame with a specific value?
+-> The function fillna() is used to fill the missing values with the specific values.
+
+Q9. How do you concatenate two Pandas DataFrames?
+-> df_new = pd.concat([df1, df2], axis=1)
+
+Q10. How do you merge two Pandas DataFrames on a specific column?
+-> We can use the merge() function.
+
+Q11. How do you group data in a Pandas DataFrame by a specific column and apply an aggregation function?
+-> We can use the groupby() function.
+
+Q12. How do you pivot a Pandas DataFrame?
+-> We can use pivot()function
+
+Q13. How do you change the data type of a column in a Pandas DataFrame?
+-> We can use astype() function
+
+Q14. How do you sort a Pandas DataFrame by a specific column?
+-> We can use sort_values() function
+
+Q15. How do you create a copy of a Pandas DataFrame?
+-> We can use copy() function
+
+Q16. How do you filter rows of a Pandas DataFrame by multiple conditions?
+-> We can use loc() function
+
+Q17. How do you calculate the mean of a column in a Pandas DataFrame?
+-> We can use the mean() function
+
+Q18. How do you calculate the standard deviation of a column in a Pandas DataFrame?
+-> We can use the std() function
+
+Q19. How do you calculate the correlation between two columns in a Pandas DataFrame?
+-> We can use the corr() function
+
+Q20. How do you select specific columns in a DataFrame using their labels?
+-> We can mention the name of the lables in the paranthesis of the name of the dataframe name.
+   Ex:- df_name[["Column1", "Column2"]]
+
+Q21. How do you select specific rows in a DataFrame using their indexes?
+-> We can use the iloc() function.
+
+Q22. How do you sort a DataFrame by a specific column?
+-> We can use sort_values() function
+
+Q23. How do you create a new column in a DataFrame based on the values of another column?
+-> There are two ways to achieve the given task. One we can directly assign the the new column the old column and do necessary changes and we can also use the apply() function in which we'll use the lambda function.
+Ex- df_new = df['old']
+    df_new = df.apply(labda abc: abc.old, axis = 1)
+
+Q24. How do you remove duplicates from a DataFrame?
+-> We can use the drop_duplicates() function
+
+Q25. What is the difference between .loc and .iloc in Pandas?
+-> "loc" gets the Dataframe rows and columns by labels or name and "iloc" gets by integer index or position. 
