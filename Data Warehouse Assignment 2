@@ -1,0 +1,25 @@
+SCENARIO 1
+Question 1. What are the strengths and weaknesses of each option?
+-> option one: It'll make it true to the grain of the problem. But it'll give problem in calculating the exact contribution done by the instructors.
+   option two: This will help to measure the contribution done by the instructor properly. But it'll increase the count of the rows in the table which will lead to less granularity.
+   option three: It'll make easier to process the operation where the instructor dimension is not needed and also easy to aggregate when instructor dimension is required. But this will be confusing for the user to choose between the two table eachtime processing the data.
+
+Question 2. Which option would you choose and why?
+-> I'll choose option one as there are few numbers of classes which will have multiple instructors. It'll not much affect the contribution as the number of classes are comparatively less.
+
+Question 3. Would your answer to Question 2 be different if the majority of classes had multiple instructors? How about if only one or two classes had multiple instructors? 
+-> In this case my answer would be option two as it has grain per row per classes per instructor where for each fact value column for multiple instructor 0.5 is used, this will help us to calculate contribution accurately and helps in the aggregation.
+
+SCENARIO 2
+Question 1. What are the strengths and weaknesses of each option?
+-> option one: This will help to maintain the dimension table simple and clean without additional data. But as it'll not contain the previous data the user will not be able to see the change and the pattern in the data.
+   option two: This will help to maintain all the old data as well the user can see the change. But as each time the new entry will be added in the same table there will be lot of repetitive data in the table.
+   option three: This option will create seperate dimension data with fixed number of rows where we can add the count for each scenario. But if the number of the entries are less then there will be extra rows in the table.
+   option four: This option will create seperate dimension data with fixed number of rows where we can add the count for each scenario. But if the number of the entries are less then there will be extra rows in the table. And also this table will be more complex and complicated to update.
+
+Question 2. Which option would you choose and why?
+-> I would use the option 2 here as the number of the users are comparetively less and it'll help to maintain the past data too in the table.
+
+Question 3. Would your answer to Question 6 be different if the number of customers and/or the time interval
+between score recalculations was much larger or much smaller? (Explain your answer.)
+-> If the number of users are more then the more preferable option is third as it has dedicated rows for each condition. And due to the additional dimensional table the customer dimensional table will not have any kind of repetative data.
